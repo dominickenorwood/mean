@@ -1,0 +1,57 @@
+div.row
+  div.comic-form
+    h1 Create or Edit Comic
+    form(name='comicForm',enctype='multipart/form-data').form-horizontal
+      div.control-group
+        label(for='title').control-label Title:
+        div.controls
+          input(ng-model="comic.title")
+      div.control-group
+        label(for='publisher').control-label Publisher:
+        div.controls
+          input(ng-model="comic.publisher")
+      div.control-group
+        label(for='writer').control-label Writer:
+        div.controls
+          input(ng-model="comic.writer")
+      div.control-group
+        label(for='artist').control-label Artist:
+        div.controls
+          input(ng-model="comic.artist")
+      div.control-group
+        label(for='releaseDate').control-label Release Date:
+        div.controls
+          input(ng-model="comic.releaseDate")
+      div.control-group
+        label(for='issue').control-label Issue:
+        div.controls
+          input(ng-model="comic.issue")
+      div.control-group
+        label(for='volume').control-label Volume:
+        div.controls
+          input(ng-model="comic.volume")
+      div.control-group
+        label(for='price').control-label Price:
+        div.controls
+          input(ng-model="comic.price")
+      div.control-group
+        label(for='image').control-label Image:
+        div.controls
+          input(ng-model="comic.image")
+        div.controls
+          input(name='image',ng-model='comic.file',type='file',accept='.jpg,.png,.gif',file-upload="",multiple="")
+          ul
+            li(ng-repeat="file in files"){{file.name}}
+          button(ng-click="uploadImage()") Upload Image
+        div.controls(style="margin-top:20px;")
+          input(type='file', name='myFile', id='myFile')
+          button(ng-click="upload()") Upload Image
+          div.progress.progress-striped
+            div.bar PROGRESS BAR!!!
+      div.control-group
+        label(for='description').control-label Description:
+        div.controls
+          textarea(ng-model="comic.description")
+      button(ng-click="save()").btn.btn-primary Save
+      button(ng-click="delete()").btn.btn-primary Delete
+      a(ng-href="/#/comics") Go Back to List

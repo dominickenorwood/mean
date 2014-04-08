@@ -1,0 +1,13 @@
+div.row
+  div.comic-form
+    h3 Sign Up! Why the hell not!
+    form(name='new-user-form',enctype='multipart/form-data').form-horizontal
+      div.control-group
+        label(for='username').control-label Username
+        div.controls
+          input(ng-model="username")
+      div.control-group
+        label(for='password').control-label Password
+        div.controls
+          input(ng-model="password")
+      button(ng-click="save()").btn.btn-primary Save

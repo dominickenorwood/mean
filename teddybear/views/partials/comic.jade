@@ -1,0 +1,17 @@
+div.row
+	div.col-md-3
+		img(ng-src="/images/{{comic.image}}")
+	div.col-md-9
+		h1 {{comic.title}} &#35;{{comic.issue}}
+		ul
+			li Publisher: {{comic.publisher}}
+			li Writer: {{comic.writer}}
+			li Artist: {{comic.artist}}
+			li Released: {{comic.releaseDate | date:'MMM d, yyyy'}}
+			li Description: {{comic.description}}
+		h2 Price: {{comic.price | currency}}
+		ul
+			li
+				a(ng-href="/#/update/{{comic._id}}") Edit {{comic.title}}
+			li
+				a(ng-href="/#/") Back to List

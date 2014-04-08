@@ -1,0 +1,13 @@
+div.row
+	div.form
+		h1 Login
+		form(name="login").form-horizontal
+			div.control-group
+				label(for="username").control-label Username
+				div.controls
+					input(ng-model="user.username")
+			div.control-group
+				label(for="password").control-label Password
+				div.controls
+					input(ng-model="user.password")
+			button(ng-click="userLogin()").btn.btn-primary Login

@@ -1,0 +1,25 @@
+div.row(ng-repeat="comic in comics")
+	div.col-md-3
+		a(ng-href="/#/comics/{{comic._id}}")
+			img(ng-src="/images/{{comic.image}}")
+	div.col-md-9
+		h1
+			a(ng-href="/#/comics/{{comic._id}}") {{comic.title}}, &#35;{{comic.issue}}
+		ul
+			li
+				span Publisher: 
+				{{comic.publisher}}
+			li
+				span Writer: 
+				{{comic.writer}}
+			li
+				span Artist: 
+				{{comic.artist}}
+			li
+				span Released: 
+				{{comic.releaseDate | date:'MMM d, yyyy'}}
+			li
+				span Description: 
+				{{comic.description}}
+		h2 Price: {{comic.price | currency}}
+a(ng-href="/#/new") Add New Comic

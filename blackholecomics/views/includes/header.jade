@@ -1,0 +1,14 @@
+header
+	h1 Black Hole Comics
+nav
+	ul
+		li
+			a(ng-href="/#/") Home
+		li
+			a(ng-href="/#/cart") Cart
+		li
+			a(ng-href="/#/search") Search
+div(ng-controller="SessionBar").welcome
+	div(sessioncheck="")
+	div(logoutbutton='')
+		a(ng-click="logout()",ng-href="/#/") Logout for real

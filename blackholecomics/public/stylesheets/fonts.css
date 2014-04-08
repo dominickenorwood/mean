@@ -1,0 +1,10 @@
+@font-face {
+    font-family: 'TonduBeta';
+    src: url('../fonts/Tondu_Beta-webfont.eot');
+    src: url('../fonts/Tondu_Beta-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Tondu_Beta-webfont.woff') format('woff'),
+         url('../fonts/Tondu_Beta-webfont.ttf') format('truetype'),
+         url('../fonts/Tondu_Beta-webfont.svg#TonduBeta') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
